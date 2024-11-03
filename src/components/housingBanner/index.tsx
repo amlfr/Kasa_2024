@@ -8,7 +8,6 @@ interface HousingBannerProps {
 
 const HousingBanner = ({ pictures }: HousingBannerProps) => { 
     const [currentIndex, setCurrentIndex] = useState(0);
-    console.log('currentIndex', currentIndex);
 
     const goToNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);

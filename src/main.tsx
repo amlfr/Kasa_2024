@@ -52,7 +52,6 @@ const router = createBrowserRouter([
                         description: "0000000",
                         rating: "0000000",
                         tags: ["0000000"],
-
                     }; 
                     data.forEach((housing)=> {
                         if(housing.id === params.housingId) { 

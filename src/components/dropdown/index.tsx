@@ -4,21 +4,19 @@ import styles from './Dropdown.module.scss';
 interface DropdownProps { 
     title: string;
     content: string | string[];
-    //Probably style prop
     width?: string;
 }
 
 const Dropdown = ({title, content, width}: DropdownProps) => { 
     const [toggle, setToggle] = useState(false);
-    console.log('state toggle', toggle);
 
     return( 
-        <div style={{ width: width }} className={`${styles.dropdownWrapper} ${toggle? styles.visibleDropdownWrapper : ''}`}>
+        <div style={{ width: width }} className={`${styles.dropdownWrapper}`}>
             <div className={styles.titleWrapper} onClick={() => { 
                 setToggle(!toggle);
             }}>
                 <span className={styles.title}>{title}</span>
-                <img className={`${toggle ? styles.reverseArrow : ''}`} src="/public/dropdown-arrow.svg" />
+                <img className={`${toggle ? styles.reverseArrow : styles.arrow}`} src="/public/dropdown-arrow.svg" />
             </div>
             <div className={`${styles.contentWrapper} ${toggle ? styles.visibleContent: ''}`}>
                 {typeof content === 'string' ? (
