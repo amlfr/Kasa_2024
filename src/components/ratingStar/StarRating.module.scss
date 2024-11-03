@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  .starRatingContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    .star {
+      height: 13px;
+    }
+  }
+}

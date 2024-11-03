@@ -36,7 +36,6 @@ const router = createBrowserRouter([
                 path: "/housing/:housingId",
                 element: <HouseDescriptionPage />,
                 loader: async ({ params }): Promise<Housing> => {
-                    console.log('params check ', params);
                     const response = await fetch('/src/assets/logements.json');
                     const data: Housing[] = await response.json();
                     let housingData: Housing = {

@@ -1,0 +1,22 @@
+.tag {
+  color: white;
+  background-color: var(--color-primary);
+  padding: 3px 40px 2px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 10px;
+    padding: 2px 30px;
+    font-weight: 700;
+    white-space: nowrap;
+    height: 18px;
+    border-radius: 5px;
+  }
+}

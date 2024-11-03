@@ -1,4 +1,4 @@
-:root, body {
+:root, body, * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,13 +8,35 @@
   --light-grey: #F6F6F6;
 }
 
+
+
 main { 
   margin:0 7vw;
   box-sizing: border-box;
+}
+
+#root { 
+  gap: 50px;
 }
 
 @font-face{ 
   font-family: "Montserrat";
   src: 
   url("/Montserrat-VariableFont_wght.ttf")
+}
+
+
+@media (max-width: 768px) { 
+  main{ 
+    margin: 0 5.5vw;
+  }
+  
+  
+  #root { 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 27px;
+  }
 }

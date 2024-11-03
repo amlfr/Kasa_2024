@@ -1,0 +1,46 @@
+.errorContainer {
+  height: 43vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10vw;
+
+  .errorNumber {
+    font-size: 288px;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .errorText {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  .errorLink {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .errorContainer {
+    height: 100vw;
+
+    .errorNumber {
+      font-size: 96px;
+    }
+
+    .errorText {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .errorLink {
+      font-size: 14px;
+    }
+  }
+}

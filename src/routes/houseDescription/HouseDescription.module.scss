@@ -1,0 +1,122 @@
+.houseDescriptionContainer {
+  .infoContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .leftInfoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        color: var(--color-primary);
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0px;
+      }
+
+      .location {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .tagContainer {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0 0 0;
+      }
+    }
+
+    .rightInfoContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      .hostInfoContainer {
+        display: flex;
+
+        .nameContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .hostName {
+            font-size: 18px;
+            color: var(--color-primary);
+            font-weight: 500;
+            flex-shrink: 0;
+            flex-grow: 0;
+            text-align: end;
+          }
+        }
+
+        .hostPicture {
+          width: 4.4vw;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          flex-shrink: 0;
+          flex-grow: 0;
+          margin: 0 0 1vw 1vw;
+        }
+      }
+    }
+  }
+
+  .dropdownContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .houseDescriptionContainer {
+    .infoContainer {
+      flex-direction: column;
+      .leftInfoContainer {
+        .title {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+
+        .location {
+          font-size: 14px;
+        }
+
+        .tagContainer {
+          flex-wrap: wrap;
+        }
+      }
+
+      .rightInfoContainer {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0 0;
+
+        .hostInfoContainer {
+          justify-content: center;
+          align-items: center;
+
+          .nameContainer {
+            .hostName {
+              font-size: 12px;
+            }
+          }
+          .hostPicture {
+            height: 32px;
+            width: 32px;
+          }
+        }
+      }
+    }
+    .dropdownContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+  }
+}
